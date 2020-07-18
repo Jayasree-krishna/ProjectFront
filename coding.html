@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Project FrontEnd</title>
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <script src="src/jquery.min.js"></script>
+    <script src="src/popper.min.js"></script>
+    <script src="src/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="coding.css">
+    <script src="https://kit.fontawesome.com/04f3d8d1d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="project-request" id="project-request" >
+      <h2 style="text-align:center;color: black;">Get Connect With Google</h2>
+      <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="src/registar.jpg" alt="registar-logo"/>
+                <h3>Welcome</h3>
+                <p>Its a best platform for passionate students to explore their ideas</p>
+                <input type="submit" name="" value="Login"/><br/>
+            </div>
+            <div class="col-md-9 register-right">
+              <div class=" register-form">
+                <img src="src/download.png" alt="registar-logo"/ width="100">
+                <p style="background-color: rgb(245, 125, 125); color: white; text-align:justify; font-weight: 600;">Please Check the items below</p>
+                <h5 style="color: rgb(241, 86, 86); font-weight: 600;">Create a new Google Account</h5>
+                <h6 style="font-weight: 700;">Mobile Phone Number</h6>
+                <div>Country:<b>India</b>(+91)<a href="#" style="color: cornflowerblue ; text-decoration: none;">change</a><span class="h3" style="color: red; font-weight: 700; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">&nbsp &nbsp Techtrickseo.com</span></div><br/>
+                <form class="form-inline" id="myForm"  >
+                  <label for="number">Number:</label>
+                  <input type="" class="form-control" name="fname"placeholder="Enter Phone number*" id="number">
+                </form>
+                <p id="answer" style="color: red; font-weight: 600;"></p>
+                <p>We'll send you an SMS to this number to start creating your new account*</p>
+                <p>By clicking "Next". you agree to the <a style="text-decoration: none; color: cornflowerblue;" href="#">Terms of Service </a>and <a style="text-decoration: none;color: cornflowerblue;">Privacy Policy</a></p>
+                <input class="btn btn-dark" style="font-weight: 700; " onClick="validateForm()" type="submit" value="Next">
+              </div>
+            </div>
+        </div>
+
+    </div>
+  </section>
+  <script>
+    function validateForm() {
+      var x = document.getElementById("number").value;
+      var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+      if(x.match(phoneNum)) {
+      }
+      else{
+        document.getElementById("answer").innerHTML="The Phone number was invalid.Please correct it  and try again";
+      }
+              
+      if (x == "") {
+        document.getElementById("answer").innerHTML="The Phone number was invalid.Please correct it  and try again";
+        
+      }
+    }
+   </script>
+    
+</body> 
+</html>
